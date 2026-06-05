@@ -561,7 +561,7 @@ footer{
 
 /* ===== Mobile ===== */
 @media(max-width:768px){
-  .container{padding:0 24px}
+  .container{padding:0 20px}
   .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);flex-direction:column;padding:8px}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 24px;border-radius:0}
@@ -573,14 +573,14 @@ footer{
   .hero p{font-size:.95rem;margin-bottom:24px}
   .section-header{margin-bottom:32px}
   .section-header p{font-size:.92rem}
-  .service-card{padding:24px}
+  .service-card{padding:24px;margin:0 4px}
   .service-detail-card{grid-template-columns:1fr;padding:24px}
   .service-detail-card.reverse{direction:ltr}
   .service-detail-icon{width:44px;height:44px;font-size:1.1rem}
   .case-card{grid-template-columns:1fr;padding:24px}
   .case-card.reverse{direction:ltr}
   .case-result{gap:20px}
-  .stats-bar{grid-template-columns:repeat(2,1fr);gap:20px;padding:28px 24px}
+  .stats-bar{grid-template-columns:repeat(2,1fr);gap:20px;padding:28px 20px}
   .stat-item:nth-child(2){border-right:none}
   .stat-item:nth-child(1),.stat-item:nth-child(2){padding-bottom:16px}
   .process-step{padding-left:44px;margin-bottom:8px}
@@ -594,18 +594,18 @@ footer{
   .page-header h1{font-size:clamp(1.5rem,4.5vw,1.8rem)}
   .case-result{flex-wrap:wrap;gap:16px}
   .testimonial-grid{grid-template-columns:1fr}
-  .testimonial-card{padding:24px}
+  .testimonial-card{padding:24px;margin:0 4px}
   .hero-stat-grid{grid-template-columns:1fr 1fr}
-  .pricing-card{padding:32px 24px}
+  .pricing-card{padding:32px 24px;margin:0 4px}
   .pricing-price{font-size:clamp(1.5rem,4vw,1.8rem)}
   .pricing-features{gap:10px}
-  .team-card{padding:24px}
+  .team-card{padding:24px;margin:0 4px}
   .team-grid{gap:20px}
   .cert-card{padding:24px}
   .cert-grid{gap:16px}
   .industry-item{padding:16px}
   .industry-grid{gap:12px}
-  .social-card{padding:24px}
+  .social-card{padding:24px;margin:0 4px}
   .social-grid{gap:16px}
   .contact-form{padding:28px}
   .contact-info-item{gap:16px}
@@ -630,24 +630,28 @@ footer{
   .hero-stat-num{font-size:clamp(1.4rem,4vw,2rem)}
 }
 @media(max-width:480px){
-  .container{padding:0 20px}
+  .container{padding:0 16px}
   .service-grid{grid-template-columns:1fr}
+  .service-card{margin:0 4px}
   .process-steps{grid-template-columns:1fr}
-  .stats-bar{grid-template-columns:1fr 1fr;padding:24px 20px;gap:16px}
+  .stats-bar{grid-template-columns:1fr 1fr;padding:24px 16px;gap:16px}
   .footer-grid{grid-template-columns:1fr;gap:24px}
   .hero-actions{flex-direction:column;gap:10px}
   .btn-primary,.btn-secondary{width:100%;text-align:center;padding:12px 20px;font-size:.92rem}
   .pricing-grid{grid-template-columns:1fr;gap:16px}
-  .pricing-card{padding:24px 20px}
+  .pricing-card{padding:24px 20px;margin:0 4px}
   .team-grid{grid-template-columns:1fr;gap:16px}
+  .team-card{padding:20px;margin:0 4px}
   .cert-grid{grid-template-columns:1fr 1fr;gap:10px}
   .cert-card{padding:20px}
   .industry-grid{grid-template-columns:1fr 1fr;gap:8px}
   .industry-item{padding:14px 12px;font-size:.82rem}
   .social-grid{grid-template-columns:1fr;gap:12px}
+  .social-card{padding:20px;margin:0 4px}
   .service-card{padding:20px}
   .service-detail-card{padding:20px}
-  .case-card{padding:20px}
+  .case-card{padding:20px;margin:0 4px}
+  .testimonial-card{margin:0 4px}
   .contact-form{padding:20px}
   .page-header{padding:32px 0 24px}
   .page-header h1{font-size:clamp(1.3rem,5vw,1.6rem)}
