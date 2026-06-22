@@ -160,6 +160,12 @@ nav{
   min-height:calc(100vh - var(--nav-h));
   min-height:calc(100dvh - var(--nav-h));
   padding:0 0 40px;position:relative;overflow:hidden;
+  background:var(--bg);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url('images/hero-bg.png') center/cover no-repeat;
+  opacity:.06;pointer-events:none;
 }
 .hero-bg{
   position:absolute;top:-30%;right:-10%;width:600px;height:600px;
