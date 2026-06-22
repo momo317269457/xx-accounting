@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>配色方案预览 · 仟企财税</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC',system-ui,sans-serif;
+  background:#f5f5f7;color:#1d1d1f;line-height:1.5;
+  padding:40px 20px;
+}
+h1{font-size:1.8rem;font-weight:700;text-align:center;margin-bottom:4px;letter-spacing:-.03em}
+.subtitle{text-align:center;color:#666;font-size:.95rem;margin-bottom:40px}
+.scheme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:28px;max-width:1680px;margin:0 auto}
+
+/* Scheme Card */
+.scheme-card{border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:transform .25s,box-shadow .3s}
+.scheme-card:hover{transform:translateY(-6px);box-shadow:0 12px 48px rgba(0,0,0,.1)}
+.scheme-preview{padding:28px 28px 20px}
+.scheme-name{font-size:1.2rem;font-weight:700;margin-bottom:2px}
+.scheme-desc{font-size:.82rem;color:#888;margin-bottom:16px}
+
+/* Color Swatches */
+.swatch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:20px}
+.swatch-item{text-align:center}
+.swatch-box{width:100%;aspect-ratio:1;border-radius:8px;border:1px solid rgba(0,0,0,.06);margin-bottom:4px}
+.swatch-label{font-size:.6rem;color:#999;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Sample UI */
+.sample-card{border-radius:12px;padding:20px;margin-bottom:14px;}
+.sample-card h4{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.sample-card p{font-size:.82rem;line-height:1.5;margin-bottom:12px}
+.sample-tag{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 10px;border-radius:20px;margin-bottom:10px}
+.sample-btn-group{display:flex;gap:8px;flex-wrap:wrap}
+.sample-btn{padding:10px 20px;border:none;border-radius:8px;font-size:.82rem;font-weight:600;cursor:default;transition:none}
+.sample-btn-outline{padding:10px 20px;border-radius:8px;font-size:.82rem;font-weight:600;cursor:default;background:transparent;transition:none}
+.sample-gradient-bar{height:6px;border-radius:3px;margin-top:4px}
+.sample-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.sample-stat{text-align:center;padding:12px 8px;border-radius:8px}
+.sample-stat-num{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}
+.sample-stat-label{font-size:.7rem;opacity:.6;margin-top:2px}
+
+/* active selection indicator */
+.scheme-card.selected{box-shadow:0 0 0 3px var(--sel,#007aff),0 8px 32px rgba(0,122,255,.15)}
+.scheme-card.selected .scheme-name::after{content:' ✓';color:var(--sel,#007aff);font-size:.9rem}
+
+@media(max-width:420px){
+  body{padding:24px 12px}
+  .scheme-grid{grid-template-columns:1fr}
+  .swatch-grid{grid-template-columns:repeat(5,1fr)}
+  .scheme-preview{padding:20px 16px}
+}
+</style>
+</head>
+<body>
+
+<h1>配色方案预览</h1>
+<p class="subtitle">点击任意方案可高亮标记 · 关闭此页后配色不变</p>
+
+<div class="scheme-grid" id="app"></div>
+
+<script>
+const schemes = [
+  {
+    id: 1,
+    name: '碧海橙光',
+    desc: '保留蓝色主调，暖橙渐变点缀 · 变化最小，层次丰富',
+    vars: {
+      '--bg':       'oklch(98.5% 0.003 70)',
+      '--surface':  'oklch(100% 0 0)',
+      '--fg':       'oklch(18% 0.008 250)',
+      '--muted':    'oklch(52% 0.01 250)',
+      '--border':   'oklch(91% 0.006 70)',
+      '--accent':   'oklch(58% 0.18 255)',
+      '--g1':       'oklch(48% 0.16 265)',
+      '--g2':       'oklch(62% 0.18 40)',
+      '--g3':       'oklch(96% 0.012 70)',
+    }
+  },
+  {
+    id: 2,
+    name: '翡翠鎏金',
+    desc: '墨绿 + 金色 · 金融财税经典，传递增长与可靠',
+    vars: {
+      '--bg':       'oklch(98% 0.005 90)',
+      '--surface':  'oklch(100% 0 0)',
+      '--fg':       'oklch(18% 0.012 160)',
+      '--muted':    'oklch(50% 0.015 160)',
+      '--border':   'oklch(90% 0.008 90)',
+      '--accent':   'oklch(55% 0.15 160)',
+      '--g1':       'oklch(42% 0.14 160)',
+      '--g2':       'oklch(62% 0.14 80)',
+      '--g3':       'oklch(96% 0.008 90)',
+    }
+  },
+  {
+    id: 3,
+    name: '紫气东来',
+    desc: '深紫 + 琥珀 · 偏高端现代，强调专业服务品质',
+    vars: {
+      '--bg':       'oklch(98% 0.004 280)',
+      '--surface':  'oklch(100% 0 0)',
+      '--fg':       'oklch(18% 0.012 280)',
+      '--muted':    'oklch(50% 0.015 280)',
+      '--border':   'oklch(90% 0.008 280)',
+      '--accent':   'oklch(55% 0.18 280)',
+      '--g1':       'oklch(45% 0.16 280)',
+      '--g2':       'oklch(62% 0.15 50)',
+      '--g3':       'oklch(95% 0.01 280)',
+    }
+  },
+  {
+    id: 4,
+    name: '赤金',
+    desc: '朱红 + 金色 · 中式传统财税风，大气喜庆有辨识度',
+    vars: {
+      '--bg':       'oklch(98% 0.005 50)',
+      '--surface':  'oklch(100% 0 0)',
+      '--fg':       'oklch(18% 0.012 30)',
+      '--muted':    'oklch(50% 0.015 30)',
+      '--border':   'oklch(90% 0.008 50)',
+      '--accent':   'oklch(55% 0.2 30)',
+      '--g1':       'oklch(45% 0.18 30)',
+      '--g2':       'oklch(62% 0.15 70)',
+      '--g3':       'oklch(95% 0.01 50)',
+    }
+  }
+];
+
+// Create a sample for each scheme
+schemes.forEach(s => {
+  const v = s.vars;
+  const bg = v['--bg'];
+  const surface = v['--surface'];
+  const fg = v['--fg'];
+  const muted = v['--muted'];
+  const border = v['--border'];
+  const accent = v['--accent'];
+  const g1 = v['--g1'];
+  const g2 = v['--g2'];
+  const g3 = v['--g3'];
+
+  const card = document.createElement('div');
+  card.className = 'scheme-card';
+  card.onclick = () => {
+    document.querySelectorAll('.scheme-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+  };
+
+  card.innerHTML = `
+    <div class="scheme-preview" style="background:${bg}">
+      <div class="scheme-name" style="color:${fg}">${s.name}</div>
+      <div class="scheme-desc">${s.desc}</div>
+
+      <!-- Swatches -->
+      <div class="swatch-grid">
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${bg};border:1px solid ${border}"></div>
+          <div class="swatch-label">bg</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${surface};border:1px solid ${border}"></div>
+          <div class="swatch-label">surface</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${fg}"></div>
+          <div class="swatch-label" style="color:${muted}">fg</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${muted}"></div>
+          <div class="swatch-label" style="color:${muted}">muted</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${border}"></div>
+          <div class="swatch-label" style="color:${muted}">border</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:${accent}"></div>
+          <div class="swatch-label" style="color:${accent}">accent</div>
+        </div>
+        <div class="swatch-item">
+          <div class="swatch-box" style="background:linear-gradient(135deg,${g1},${g2})"></div>
+          <div class="swatch-label" style="color:${muted}">gradient</div>
+        </div>
+      </div>
+
+      <!-- Sample Card -->
+      <div class="sample-card" style="background:${surface};border:1px solid ${border}">
+        <span class="sample-tag" style="background:${g3};color:${accent}">专业服务</span>
+        <h4 style="color:${fg}">代理记账</h4>
+        <p style="color:${muted}">专业会计团队按月记账、编制财务报表，确保账务清晰合规。</p>
+        <div class="sample-btn-group">
+          <button class="sample-btn" style="background:linear-gradient(135deg,${g1},${g2});color:#fff;box-shadow:0 4px 16px ${g1}40">立即咨询</button>
+          <button class="sample-btn-outline" style="border:1px solid ${border};color:${fg}">了解详情</button>
+        </div>
+      </div>
+
+      <!-- Sample Stats -->
+      <div class="sample-stats">
+        <div class="sample-stat" style="background:${surface};border:1px solid ${border}">
+          <div class="sample-stat-num" style="background:linear-gradient(135deg,${g1},${g2});-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">专业</div>
+          <div class="sample-stat-label" style="color:${muted}">财税团队</div>
+        </div>
+        <div class="sample-stat" style="background:${surface};border:1px solid ${border}">
+          <div class="sample-stat-num" style="background:linear-gradient(135deg,${g1},${g2});-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">合规</div>
+          <div class="sample-stat-label" style="color:${muted}">值得信赖</div>
+        </div>
+      </div>
+
+      <!-- Gradient bar -->
+      <div class="sample-gradient-bar" style="background:linear-gradient(90deg,${g1},${g2},${accent})"></div>
+    </div>
+  `;
+
+  document.getElementById('app').appendChild(card);
+});
+</script>
+</body>
+</html>
