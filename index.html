@@ -65,7 +65,7 @@ p{color:var(--muted);max-width:65ch}
 
 /* ===== Layout ===== */
 .container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
-.page-section{padding:clamp(60px,10vw,120px) 0}
+.page-section{padding-top:clamp(60px,10vw,120px);padding-bottom:clamp(60px,10vw,120px)}
 section.page-section{padding:0}
 section.page-section:not(.active-page){display:none}
 section.active-page{display:block}
@@ -123,7 +123,9 @@ nav{
 
 /* ===== Hero ===== */
 .hero{
-  display:flex;align-items:center;min-height:calc(100vh - var(--nav-h));
+  display:flex;align-items:center;
+  min-height:calc(100vh - var(--nav-h));
+  min-height:calc(100dvh - var(--nav-h));
   padding:0 0 40px;position:relative;overflow:hidden;
 }
 .hero-bg{
@@ -582,11 +584,12 @@ footer{
 /* ===== Mobile ===== */
 @media(max-width:768px){
   .container{padding:0 20px}
-  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);flex-direction:column;padding:8px}
+  .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:none;border-bottom:1px solid var(--border);flex-direction:column;padding:8px}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 24px;border-radius:0}
   .nav-cta{display:none}
   .nav-toggle{display:flex}
+  .hero-bg,.hero-bg-2,.hero-bg-3,.hero-bg-4{display:none}
   .hero-grid,.about-intro,.contact-grid{grid-template-columns:1fr}
   .hero{padding:24px 0 16px}
   .hero h1{font-size:clamp(1.6rem,5vw,2.2rem)}
@@ -638,7 +641,7 @@ footer{
   h2{font-size:clamp(1.2rem,3.5vw,1.5rem)}
   h3{font-size:clamp(1rem,2.5vw,1.15rem)}
   p{font-size:.92rem;line-height:1.6}
-  .page-section{padding:clamp(32px,6vw,48px) 0}
+  .page-section{padding-top:clamp(32px,6vw,48px);padding-bottom:clamp(32px,6vw,48px)}
   .footer-grid{padding-bottom:32px;margin-bottom:24px}
   .footer-brand p{font-size:.85rem}
   .contact-info-item p{font-size:.85rem}
@@ -670,6 +673,7 @@ footer{
   .social-card{padding:20px;margin:0 4px}
   .service-card{padding:20px}
   .service-detail-card{padding:20px}
+  .service-features li{align-items:flex-start}
   .case-card{padding:20px;margin:0 4px}
   .testimonial-card{margin:0 4px}
   .contact-form{padding:20px}
@@ -710,8 +714,8 @@ footer{
   h2{font-size:clamp(1.15rem,4vw,1.3rem)}
   h3{font-size:clamp(.95rem,2.5vw,1.05rem)}
   p{font-size:.88rem}
-  .page-section{padding:clamp(24px,5vw,36px) 0}
-  .page-section .page-section{padding:clamp(20px,4vw,28px) 0}
+  .page-section{padding-top:clamp(24px,5vw,36px);padding-bottom:clamp(24px,5vw,36px)}
+  .page-section .page-section{padding-top:clamp(20px,4vw,28px);padding-bottom:clamp(20px,4vw,28px)}
   .hero-stat-num{font-size:clamp(1.2rem,4vw,1.6rem)}
   .hero-stat-label{font-size:.78rem}
   .case-result-num{font-size:clamp(1rem,3vw,1.2rem)}
@@ -721,22 +725,64 @@ footer{
   .value-card-icon{width:40px;height:40px;font-size:1rem}
   .faq-q{font-size:.88rem;padding:12px 16px}
   .faq-a{font-size:.85rem}
-  .submit-btn{font-size:.92rem;padding:12px}
+  .submit-btn{font-size:.92rem;padding:14px}
   .contact-info-icon{width:38px;height:38px;font-size:.95rem}
   .nav-links a{padding:14px 24px;font-size:.9rem}
+}
+@media(max-width:375px){
+  .container{padding:0 12px}
+  .process-steps{counter-reset:step}
+  .hero h1{font-size:clamp(1.3rem,5vw,1.6rem)}
+  .hero p{font-size:.85rem}
+  .btn-primary,.btn-secondary{padding:10px 16px;font-size:.85rem}
+  .pricing-features li{padding:6px 0;font-size:.82rem}
+  .pricing-desc{font-size:.82rem}
+  .page-header h1{font-size:clamp(1.2rem,4.5vw,1.4rem)}
+  .page-header p{font-size:.82rem}
+  .hero-stat-num{font-size:clamp(1rem,3.5vw,1.3rem)}
+  .hero-stat-label{font-size:.72rem}
+  .stat-number{font-size:clamp(1rem,3.5vw,1.3rem)}
+  .stat-label{font-size:.75rem}
+  .section-header h2{font-size:clamp(1rem,4vw,1.2rem)}
+  .section-header p{font-size:.82rem}
+  h2{font-size:clamp(1rem,4vw,1.2rem)}
+  h3{font-size:clamp(.85rem,2.5vw,.95rem)}
+  p{font-size:.85rem}
+  .industry-item{padding:12px 10px;font-size:.78rem}
+  .cert-card{padding:16px}
+  .cert-card h4{font-size:.82rem}
+  .case-result-num{font-size:clamp(.9rem,3vw,1.05rem)}
+  .case-result-label{font-size:.72rem}
+  .service-card-icon{width:36px;height:36px;font-size:1rem}
+  .value-card-icon{width:36px;height:36px;font-size:.9rem}
+  .contact-info-icon{width:34px;height:34px;font-size:.85rem}
+  .page-section{padding-top:clamp(20px,5vw,28px);padding-bottom:clamp(20px,5vw,28px)}
+  .cta-section{padding:24px 16px}
+  .cta-btn{padding:10px 24px;font-size:.85rem}
+  .social-qr{width:100px;height:100px}
+  .testimonial-text{font-size:.85rem}
+  .case-card{padding:16px}
+  .service-detail-card{padding:16px}
+  .pricing-card{padding:20px 16px}
 }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
-document.addEventListener('DOMContentLoaded', function(){
+// 地图懒加载：等 contact 页面激活、容器可见后再初始化
+var mapInitialized = false;
+function initMap(){
+  if(mapInitialized) return;
+  var mapEl = document.getElementById('map');
+  if(!mapEl || mapEl.offsetParent === null) return;
+  mapInitialized = true;
   var map = L.map('map').setView([31.4915, 120.3119], 15);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
   var marker = L.marker([31.5755, 120.3195]).addTo(map);
   marker.bindPopup('仟企财税 · 无锡总部<br/>无锡市梁溪区广益街道广南路307-2213<br/>电话：请咨询');
-});
+}
 </script>
 </head>
 <body>
@@ -1540,6 +1586,7 @@ function showPage(pageId){
   if(link) link.classList.add('active');
   document.getElementById('navLinks').classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
+  if(pageId === 'contact') setTimeout(initMap, 150);
   if(pageId !== 'services'){
     document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
   }
