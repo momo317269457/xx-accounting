@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3DD5C8" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#3DD5C8" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <!-- Monitor frame -->
+  <rect x="40" y="50" width="320" height="200" rx="12" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="40" y="50" width="320" height="36" rx="12" fill="oklch(92% 0.005 250)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="40" y="74" width="320" height="2" fill="var(--border,#e0e4ed)"/>
+  <circle cx="60" cy="68" r="5" fill="#FF5F57"/>
+  <circle cx="78" cy="68" r="5" fill="#FFBD2E"/>
+  <circle cx="96" cy="68" r="5" fill="#28C840"/>
+  <!-- Title bar -->
+  <text x="200" y="72" text-anchor="middle" font-size="11" fill="oklch(54% 0.012 250)" font-family="system-ui,sans-serif">财务数据仪表盘</text>
+  <!-- Chart bars -->
+  <rect x="70" y="180" width="30" height="50" rx="4" fill="url(#g2)"/>
+  <rect x="110" y="150" width="30" height="80" rx="4" fill="url(#g3)"/>
+  <rect x="150" y="130" width="30" height="100" rx="4" fill="url(#g2)"/>
+  <rect x="190" y="160" width="30" height="70" rx="4" fill="url(#g3)"/>
+  <rect x="230" y="110" width="30" height="120" rx="4" fill="url(#g2)" opacity=".5"/>
+  <!-- Line graph -->
+  <polyline points="280,190 300,170 320,150 340,140 360,120" fill="none" stroke="#4A7CF7" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="280" cy="190" r="4" fill="#4A7CF7"/>
+  <circle cx="300" cy="170" r="4" fill="#4A7CF7"/>
+  <circle cx="320" cy="150" r="4" fill="#4A7CF7"/>
+  <circle cx="340" cy="140" r="4" fill="#4A7CF7"/>
+  <circle cx="360" cy="120" r="4" fill="#4A7CF7"/>
+  <!-- X-axis labels -->
+  <text x="85" y="242" text-anchor="middle" font-size="9" fill="oklch(54% 0.012 250)">1月</text>
+  <text x="125" y="242" text-anchor="middle" font-size="9" fill="oklch(54% 0.012 250)">2月</text>
+  <text x="165" y="242" text-anchor="middle" font-size="9" fill="oklch(54% 0.012 250)">3月</text>
+  <text x="205" y="242" text-anchor="middle" font-size="9" fill="oklch(54% 0.012 250)">4月</text>
+  <!-- Stat cards -->
+  <rect x="58" y="100" width="80" height="32" rx="6" fill="url(#g1)"/>
+  <text x="64" y="114" font-size="8" fill="oklch(54% 0.012 250)">营收</text>
+  <text x="64" y="126" font-size="11" font-weight="700" fill="#4A7CF7">¥386,200</text>
+  <rect x="148" y="100" width="80" height="32" rx="6" fill="url(#g1)"/>
+  <text x="154" y="114" font-size="8" fill="oklch(54% 0.012 250)">支出</text>
+  <text x="154" y="126" font-size="11" font-weight="700" fill="#3DD5C8">¥142,500</text>
+  <rect x="262" y="100" width="80" height="32" rx="6" fill="url(#g1)"/>
+  <text x="268" y="114" font-size="8" fill="oklch(54% 0.012 250)">利润</text>
+  <text x="268" y="126" font-size="11" font-weight="700" fill="#4A7CF7">¥243,700</text>
+  <!-- Stand -->
+  <rect x="180" y="250" width="40" height="8" rx="3" fill="var(--border,#e0e4ed)"/>
+  <rect x="160" y="258" width="80" height="6" rx="3" fill="var(--border,#e0e4ed)"/>
+</svg>

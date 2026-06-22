@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="340" height="240" rx="14" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <!-- Monitor -->
+  <rect x="80" y="60" width="160" height="110" rx="8" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="80" y="60" width="160" height="24" rx="8" fill="oklch(92% 0.005 250)"/>
+  <rect x="80" y="76" width="160" height="2" fill="var(--border,#e0e4ed)"/>
+  <circle cx="96" cy="72" r="4" fill="#FF5F57"/>
+  <circle cx="108" cy="72" r="4" fill="#FFBD2E"/>
+  <circle cx="120" cy="72" r="4" fill="#28C840"/>
+  <!-- Chart on screen -->
+  <rect x="96" y="100" width="20" height="40" rx="3" fill="url(#g2)"/>
+  <rect x="122" y="90" width="20" height="50" rx="3" fill="url(#g2)" opacity=".7"/>
+  <rect x="148" y="110" width="20" height="30" rx="3" fill="url(#g2)" opacity=".5"/>
+  <rect x="174" y="80" width="20" height="60" rx="3" fill="url(#g2)" opacity=".8"/>
+  <rect x="200" y="95" width="20" height="45" rx="3" fill="url(#g2)" opacity=".6"/>
+  <!-- Stand -->
+  <rect x="150" y="170" width="20" height="20" rx="2" fill="var(--border,#e0e4ed)"/>
+  <rect x="140" y="190" width="40" height="6" rx="3" fill="var(--border,#e0e4ed)"/>
+  <!-- Keyboard -->
+  <rect x="140" y="200" width="60" height="14" rx="4" fill="var(--border,#e0e4ed)"/>
+  <!-- Graph paper -->
+  <rect x="270" y="100" width="80" height="70" rx="6" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="280" y1="130" x2="340" y2="130" stroke="var(--border,#e0e4ed)" stroke-width=".5" stroke-dasharray="2"/>
+  <line x1="280" y1="145" x2="340" y2="145" stroke="var(--border,#e0e4ed)" stroke-width=".5" stroke-dasharray="2"/>
+  <polyline points="280,150 290,145 300,148 310,138 320,135 330,128 340,130" fill="none" stroke="#4A7CF7" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tags -->
+  <rect x="60" y="230" width="80" height="22" rx="11" fill="url(#g1)"/>
+  <text x="100" y="245" text-anchor="middle" font-size="9" fill="#4A7CF7">数据驱动</text>
+  <rect x="160" y="230" width="80" height="22" rx="11" fill="url(#g1)"/>
+  <text x="200" y="245" text-anchor="middle" font-size="9" fill="#4A7CF7">精细化管理</text>
+  <rect x="260" y="230" width="80" height="22" rx="11" fill="url(#g1)"/>
+  <text x="300" y="245" text-anchor="middle" font-size="9" fill="#4A7CF7">SaaS</text>
+</svg>

@@ -343,6 +343,10 @@ nav{
   border:1px solid var(--border);
 }
 .service-detail-visual img{width:100%;height:100%;object-fit:cover;display:block}
+[data-theme="dark"] .service-detail-visual img,
+[data-theme="dark"] .about-visual img,
+[data-theme="dark"] .case-visual img,
+[data-theme="dark"] .social-qr img{filter:brightness(.88) contrast(1.08)}
 
 /* ===== FAQ ===== */
 .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
@@ -1018,7 +1022,7 @@ function initMap(){
             <li>年度财务报表汇总</li>
           </ul>
         </div>
-        <div class="service-detail-visual"><img src="mq097dyt-Gemini_Generated_Image_o22wi2o22wi2o22w.png" alt="财务数据仪表盘" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
+        <div class="service-detail-visual"><img src="images/financial-dashboard.svg" alt="财务数据仪表盘" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
 
       <div class="service-detail-card reverse">
@@ -1033,7 +1037,7 @@ function initMap(){
             <li>税收优惠政策匹配与申请</li>
           </ul>
         </div>
-        <div class="service-detail-visual"><img src="mq09bp35-Gemini_Generated_Image_m15895m15895m158.png" alt="税务申报日历" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
+        <div class="service-detail-visual"><img src="images/tax-calendar.svg" alt="税务申报日历" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
       </div>
 
       <div class="service-detail-card">
@@ -1048,7 +1052,7 @@ function initMap(){
             <li>公司注销全程代办</li>
           </ul>
         </div>
-        <div class="service-detail-visual"><img src="mq09f38h-Gemini_Generated_Image_b4vhibb4vhibb4vh.png" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block" alt="注册流程示意图"></div>
+        <div class="service-detail-visual"><img src="images/registration-process.svg" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block" alt="注册流程示意图"></div>
       </div>
 
       <div class="service-detail-card reverse">
@@ -1063,7 +1067,7 @@ function initMap(){
             <li>企业并购重组税务支持</li>
           </ul>
         </div>
-        <div class="service-detail-visual"><img src="mq09i42z-Gemini_Generated_Image_l6426vl6426vl642.png" alt="税务筹划数据对比示意图" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
+        <div class="service-detail-visual"><img src="images/tax-planning.svg" alt="税务筹划数据对比示意图" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
       </div>
     </div>
   </div>
@@ -1181,7 +1185,7 @@ function initMap(){
         <p style="margin-top:16px">无锡仟企财税管理有限公司成立于 2024 年，是经无锡市梁溪区行政审批局批准设立的专业财税服务机构。我们深知中小企业在财税方面的痛点——政策复杂、合规要求高、专职会计成本大——因此专注于为企业提供专业、透明、高效的外包式财税服务。</p>
         <p style="margin-top:12px">团队核心成员在财税领域拥有多年实务经验，能够为科技、贸易、制造、餐饮、教育等行业的企业客户提供专业服务。我们坚信：好的财税服务不只是算好账、报好税，更是为企业的稳健发展提供数据支撑和决策依据。</p>
       </div>
-      <div class="about-visual">团队办公场景示意图</div>
+      <div class="about-visual"><img src="images/office-scene.svg" alt="团队办公场景" style="width:100%;height:100%;object-fit:cover;border-radius:20px;display:block"></div>
     </div>
 
     <div class="about-values">
@@ -1322,7 +1326,7 @@ function initMap(){
             </div>
           </div>
         </div>
-        <div class="case-visual">案例详情示意图</div>
+        <div class="case-visual"><img src="images/case-tech.svg" alt="科技电商案例" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
 
       <div class="case-card reverse">
@@ -1345,7 +1349,7 @@ function initMap(){
             </div>
           </div>
         </div>
-        <div class="case-visual">案例详情示意图</div>
+        <div class="case-visual"><img src="images/case-trade.svg" alt="贸易进出口案例" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
 
       <div class="case-card">
@@ -1368,7 +1372,7 @@ function initMap(){
             </div>
           </div>
         </div>
-        <div class="case-visual">案例详情示意图</div>
+        <div class="case-visual"><img src="images/case-food.svg" alt="餐饮连锁案例" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
 
       <div class="case-card reverse">
@@ -1391,7 +1395,7 @@ function initMap(){
             </div>
           </div>
         </div>
-        <div class="case-visual">案例详情示意图</div>
+        <div class="case-visual"><img src="images/case-manufacturing.svg" alt="制造业案例" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
 
       <div class="case-card">
@@ -1414,7 +1418,7 @@ function initMap(){
             </div>
           </div>
         </div>
-        <div class="case-visual">案例详情示意图</div>
+        <div class="case-visual"><img src="images/case-education.svg" alt="教育培训案例" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
       </div>
     </div>
 
@@ -1540,12 +1544,12 @@ function initMap(){
     </div>
     <div class="social-grid">
       <div class="social-card">
-        <div class="social-qr">公众号二维码<br>（示意区域）</div>
+        <div class="social-qr"><img src="images/qr-official.svg" alt="公众号二维码" style="width:100%;height:100%;object-fit:contain;display:block;padding:8px"></div>
         <h4>仟企财税 · 公众号</h4>
         <p>每周推送财税政策解读、节税技巧、行业动态。关注即送《中小企业财税合规指南》电子版。</p>
       </div>
       <div class="social-card">
-        <div class="social-qr">企业微信<br>（示意区域）</div>
+        <div class="social-qr"><img src="images/qr-wechat.svg" alt="企业微信二维码" style="width:100%;height:100%;object-fit:contain;display:block;padding:8px"></div>
         <h4>专属顾问 · 企业微信</h4>
         <p>添加专属财税顾问，一对一在线咨询。工作日 30 分钟内回复，紧急事项 2 小时内处理。</p>
       </div>

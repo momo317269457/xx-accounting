@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3DD5C8" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#3DD5C8" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="340" height="240" rx="14" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <!-- Factory building -->
+  <rect x="60" y="70" width="280" height="160" rx="8" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="60" y="70" width="280" height="24" rx="8" fill="url(#g2)"/>
+  <rect x="60" y="86" width="280" height="4" fill="url(#g2)" opacity=".7"/>
+  <!-- Chimneys -->
+  <rect x="90" y="48" width="16" height="28" rx="4" fill="var(--border,#e0e4ed)"/>
+  <rect x="182" y="38" width="16" height="38" rx="4" fill="var(--border,#e0e4ed)"/>
+  <rect x="280" y="50" width="16" height="26" rx="4" fill="var(--border,#e0e4ed)"/>
+  <!-- Windows on factory -->
+  <rect x="120" y="110" width="40" height="30" rx="4" fill="url(#g3)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <rect x="180" y="110" width="40" height="30" rx="4" fill="url(#g3)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <rect x="240" y="110" width="40" height="30" rx="4" fill="url(#g3)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <!-- Conveyor belt -->
+  <rect x="80" y="200" width="240" height="8" rx="4" fill="var(--border,#e0e4ed)"/>
+  <rect x="80" y="200" width="240" height="3" fill="url(#g2)" opacity=".4"/>
+  <!-- Product boxes on belt -->
+  <rect x="100" y="178" width="22" height="22" rx="3" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <rect x="140" y="178" width="22" height="22" rx="3" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <rect x="180" y="178" width="22" height="22" rx="3" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <rect x="220" y="178" width="22" height="22" rx="3" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <rect x="260" y="178" width="22" height="22" rx="3" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <!-- Tags -->
+  <rect x="55" y="240" width="90" height="22" rx="11" fill="url(#g1)"/>
+  <text x="100" y="255" text-anchor="middle" font-size="9" fill="#4A7CF7">成本核算</text>
+  <rect x="160" y="240" width="90" height="22" rx="11" fill="url(#g1)"/>
+  <text x="205" y="255" text-anchor="middle" font-size="9" fill="#3DD5C8">流程梳理</text>
+  <rect x="265" y="240" width="90" height="22" rx="11" fill="url(#g1)"/>
+  <text x="310" y="255" text-anchor="middle" font-size="9" fill="#4A7CF7">库存管理</text>
+</svg>

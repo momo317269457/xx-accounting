@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3DD5C8" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#3DD5C8" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="340" height="240" rx="14" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <!-- Graduation cap -->
+  <polygon points="200,60 120,100 200,140 280,100" fill="url(#g2)" stroke="#4A7CF7" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="120,100 120,125 200,165 200,140" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <polygon points="280,100 280,125 200,165" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <!-- Tassel -->
+  <path d="M200,60 Q210,65 215,80" fill="none" stroke="#4A7CF7" stroke-width="2"/>
+  <!-- Book -->
+  <rect x="140" y="180" width="120" height="70" rx="6" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="140" y="180" width="6" height="70" rx="2" fill="url(#g2)"/>
+  <!-- Book lines -->
+  <line x1="156" y1="196" x2="250" y2="196" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="156" y1="210" x2="240" y2="210" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="156" y1="224" x2="230" y2="224" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="156" y1="238" x2="245" y2="238" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <!-- People representing multiple campuses -->
+  <circle cx="80" cy="175" r="18" fill="url(#g3)"/>
+  <circle cx="80" cy="167" r="6" fill="#fff"/>
+  <rect x="68" y="188" width="24" height="16" rx="6" fill="url(#g3)"/>
+  <circle cx="320" cy="175" r="18" fill="url(#g2)"/>
+  <circle cx="320" cy="167" r="6" fill="#fff"/>
+  <rect x="308" y="188" width="24" height="16" rx="6" fill="url(#g2)"/>
+  <!-- Tags -->
+  <rect x="180" y="262" width="80" height="22" rx="11" fill="url(#g1)"/>
+  <text x="220" y="277" text-anchor="middle" font-size="9" fill="#4A7CF7">跨区域财税</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7"/>
+      <stop offset="100%" stop-color="#3B6FE0"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DD5C8"/>
+      <stop offset="100%" stop-color="#2BBBAE"/>
+    </linearGradient>
+  </defs>
+  <!-- Process flow - horizontal steps -->
+  <!-- Step 1 -->
+  <rect x="30" y="40" width="80" height="100" rx="12" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="48" y="56" width="44" height="44" rx="22" fill="url(#g2)"/>
+  <text x="70" y="83" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">1</text>
+  <text x="70" y="116" text-anchor="middle" font-size="11" fill="var(--fg,#1a1a1a)" font-weight="600">核名</text>
+  <text x="70" y="130" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">在线核名</text>
+  <!-- Arrow 1 -->
+  <text x="120" y="90" text-anchor="middle" font-size="20" fill="var(--border,#e0e4ed)">→</text>
+  <!-- Step 2 -->
+  <rect x="140" y="40" width="80" height="100" rx="12" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="158" y="56" width="44" height="44" rx="22" fill="url(#g3)"/>
+  <text x="180" y="83" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">2</text>
+  <text x="180" y="116" text-anchor="middle" font-size="11" fill="var(--fg,#1a1a1a)" font-weight="600">提交</text>
+  <text x="180" y="130" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">资料提交</text>
+  <!-- Arrow 2 -->
+  <text x="230" y="90" text-anchor="middle" font-size="20" fill="var(--border,#e0e4ed)">→</text>
+  <!-- Step 3 -->
+  <rect x="250" y="40" width="80" height="100" rx="12" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <rect x="268" y="56" width="44" height="44" rx="22" fill="url(#g2)"/>
+  <text x="290" y="83" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">3</text>
+  <text x="290" y="116" text-anchor="middle" font-size="11" fill="var(--fg,#1a1a1a)" font-weight="600">拿证</text>
+  <text x="290" y="130" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">领取执照</text>
+  <!-- Badge: 3 days -->
+  <rect x="165" y="150" width="70" height="22" rx="11" fill="url(#g1)" stroke="#4A7CF7" stroke-width="1"/>
+  <text x="200" y="164" text-anchor="middle" font-size="10" fill="#4A7CF7" font-weight="600">最快 3 天</text>
+  <!-- Docs illustration section -->
+  <rect x="30" y="190" width="340" height="80" rx="12" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width="1" stroke-dasharray="4"/>
+  <!-- Document icons -->
+  <rect x="52" y="206" width="30" height="38" rx="4" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="58" y1="216" x2="76" y2="216" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="58" y1="222" x2="72" y2="222" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="58" y1="228" x2="74" y2="228" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <text x="67" y="255" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">身份证</text>
+  <rect x="112" y="206" width="30" height="38" rx="4" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="118" y1="216" x2="136" y2="216" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="118" y1="222" x2="132" y2="222" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="118" y1="228" x2="134" y2="228" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <text x="127" y="255" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">地址材料</text>
+  <rect x="172" y="206" width="30" height="38" rx="4" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="178" y1="216" x2="196" y2="216" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="178" y1="222" x2="192" y2="222" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="178" y1="228" x2="194" y2="228" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <text x="187" y="255" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">经营范围</text>
+  <rect x="232" y="206" width="30" height="38" rx="4" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="238" y1="216" x2="256" y2="216" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="238" y1="222" x2="252" y2="222" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="238" y1="228" x2="254" y2="228" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <text x="247" y="255" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">股东信息</text>
+  <rect x="292" y="206" width="30" height="38" rx="4" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <line x1="298" y1="216" x2="316" y2="216" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="298" y1="222" x2="312" y2="222" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <line x1="298" y1="228" x2="314" y2="228" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <text x="307" y="255" text-anchor="middle" font-size="8" fill="oklch(54% 0.012 250)">公司章程</text>
+</svg>

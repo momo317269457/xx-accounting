@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7CF7" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#4A7CF7" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3DD5C8" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#3DD5C8" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="340" height="240" rx="14" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1.5"/>
+  <!-- World map simplified -->
+  <ellipse cx="200" cy="130" rx="130" ry="70" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <ellipse cx="150" cy="130" rx="30" ry="40" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width=".5"/>
+  <ellipse cx="260" cy="140" rx="40" ry="35" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width=".5"/>
+  <ellipse cx="200" cy="90" rx="25" ry="15" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width=".5"/>
+  <!-- Arrows on map -->
+  <polyline points="150,130 170,110 190,120" fill="none" stroke="#4A7CF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="190,116 194,124 186,122" fill="#4A7CF7"/>
+  <polyline points="190,120 220,100 250,115" fill="none" stroke="#3DD5C8" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="250,111 254,119 246,117" fill="#3DD5C8"/>
+  <!-- Ship icon -->
+  <rect x="120" y="200" width="160" height="36" rx="8" fill="url(#g1)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <polygon points="160,200 160,180 240,180 240,200" fill="var(--surface,#fff)" stroke="var(--border,#e0e4ed)" stroke-width="1"/>
+  <text x="200" y="197" text-anchor="middle" font-size="10" fill="oklch(54% 0.012 250)">🚢 进出口贸易</text>
+  <!-- Labels -->
+  <rect x="60" y="250" width="90" height="20" rx="10" fill="url(#g1)"/>
+  <text x="105" y="264" text-anchor="middle" font-size="9" fill="#4A7CF7">出口退税</text>
+  <rect x="170" y="250" width="90" height="20" rx="10" fill="url(#g1)"/>
+  <text x="215" y="264" text-anchor="middle" font-size="9" fill="#3DD5C8">多币种</text>
+  <rect x="280" y="250" width="90" height="20" rx="10" fill="url(#g1)"/>
+  <text x="325" y="264" text-anchor="middle" font-size="9" fill="#4A7CF7">合规管理</text>
+</svg>
