@@ -4,3 +4,6 @@
 .baoyu-skills/
 skills-lock/
 skills-lock.*
+
+# Generated image cards
+image-cards/
