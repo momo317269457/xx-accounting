@@ -1,0 +1,6 @@
+# Agent configuration & skills
+.agent/
+.agents/
+.baoyu-skills/
+skills-lock/
+skills-lock.*
